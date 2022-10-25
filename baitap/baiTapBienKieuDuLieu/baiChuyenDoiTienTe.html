@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+
+    <b>Amount</b>
+    <input type="text" size="10" id="amount">
+    <b>From Currency</b>
+    <select id="ct1">
+        <option value="VND" selected>Việt Nam</option>
+        <option value="USD">Mỹ</option>
+        <option value="Euro">Châu âu</option>
+    </select>
+    <b>To Currency</b>
+    <select id="ct2">
+        <option value="VND" selected>VND</option>
+        <option value="USD">USD</option>
+        <option value="Euro">Euro</option>
+    </select><br><br>
+    <button type="button" onclick="chuyendoi()">Convert</button>
+    <label> Result : <span id="KQ"> </span></label>
+</form>
+</body>
+<script>
+    function chuyendoi() {
+        var a = +document.getElementById('amount').value;
+        var b = document.getElementById('ct1').value;
+        var c = document.getElementById('ct2').value;
+        if (b == c) {
+            document.getElementById("KQ").textContent = a;
+        }
+        if (b == 'VND' && c == 'USD') {
+            let giaTri = a / 23000;
+            document.getElementById("KQ").textContent = giaTri;
+        } else if (b == 'VND' && c == 'Euro') {
+            let giaTri = a / 25000;
+            document.getElementById("KQ").textContent = giaTri;
+        }
+        if (b == 'USD' && c == 'VND') {
+            let giaTri = a * 23000;
+            document.getElementById("KQ").textContent = giaTri;
+        } else if (b == 'USD' && c == 'Euro') {
+            let giaTri = (a * 23000) / 25000;
+            document.getElementById("KQ").textContent = giaTri;
+        }
+        if (b == 'Euro' && c == 'VND') {
+            let giaTri = a * 25000;
+            document.getElementById("KQ").textContent = giaTri;
+        } else if (b == 'Euro' && c == 'USD') {
+            let giaTri = (a * 25000) / 23000
+            document.getElementById("KQ").textContent = giaTri;
+        }
+
+    }
+
+
+</script>
+</html>

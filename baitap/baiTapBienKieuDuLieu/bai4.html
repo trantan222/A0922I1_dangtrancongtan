@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu Vi Hình Tròn</title>
+</head>
+<body>
+<input type="text" id ="r" placeholder="Nhập Bán Kính">
+<br>
+<button type="button" onclick="Chuvi()"> Kết Quả</button>
+<label> Chu vi hình tròn : <span id="KQ"></span></label>
+</body>
+</html>
+<script>
+    function Chuvi() {
+        var r = +document.getElementById("r").value;
+        var chuViHT = 2*r*3.14
+        document.getElementById("KQ").textContent = chuViHT;
+    }
+
+</script>

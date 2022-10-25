@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Độ C sang Độ F</title>
+</head>
+<body>
+<p>Độ C</p>
+<input type="text" id ="doC" placeholder="Nhập độ C" size="10">
+<br>
+<br>
+<button onclick="doF()"> Chuyển sang độ F</button>
+<br>
+<br>
+<label > Result : <span id = "KQ"></span></label>
+</body>
+</html>
+<script>
+    function doF() {
+        var doC = +document.getElementById("doC").value;
+        var doF = (1.8 *doC) +32;
+        document.getElementById("KQ").textContent = doF;
+    }
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính EVIL 36</title>
+    <style>
+        button{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<td> <input type="text " id="KetQua"></td>
+<form>
+<table >
+    <tr>
+        <td ><button type="button" value="1" onclick="themSo(this.value)">1</button> </td>
+        <td ><button type="button" value="2" onclick="themSo(this.value)">2</button> </td>
+        <td ><button type="button" value="3" onclick="themSo(this.value)">3</button> </td>
+        <td ><button type="button" value="+" onclick="themSo(this.value)">+</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button" value="4"onclick="themSo(this.value)">4</button> </td>
+        <td ><button type="button" value="5"onclick="themSo(this.value)">5</button> </td>
+        <td ><button type="button" value="6"onclick="themSo(this.value)">6</button> </td>
+        <td ><button type="button" value="-"onclick="themSo(this.value)">-</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button" value="7"onclick="themSo(this.value)">7</button> </td>
+        <td ><button type="button" value="8"onclick="themSo(this.value)">8</button> </td>
+        <td ><button type="button" value="9"onclick="themSo(this.value)">9</button> </td>
+        <td ><button type="button" value="*"onclick="themSo(this.value)">*</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button" value="AC"onclick="xoa">AC</button> </td>
+        <td ><button type="button" value="0"onclick="themSo(this.value)">0</button> </td>
+        <td ><button type="button" value="="onclick="tinh()">=</button> </td>
+        <td ><button type="button" value="/"onclick="themSo(this.value)">/</button> </td>
+    </tr>
+</table>
+</form>
+</body>
+<script>
+    let ketQua = document.getElementById("KetQua");
+    function themSo(giatri) {
+        ketQua.value += giatri;
+    }
+    function tinh() {
+        let result = eval(ketQua.value);
+        ketQua.value = result;
+    }
+    function xoa() {
+        ketQua.value ="";
+    }
+</script>
+</html>

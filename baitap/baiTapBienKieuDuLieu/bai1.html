@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng và điểm TB</title>
+</head>
+<body>
+<input type="text" size="10" id ="ly"  placeholder="Nhập điểm Lý"> <br>
+<input type="text" size="10" id ="hoa" placeholder="Nhập điểm Hoá"> <br>
+<input type="text" size="10" id ="sinh"placeholder="Nhập điểm Sinh">
+<br>
+<br>
+<button type="button" onclick="TinhDiem()"> Tính Điểm </button>
+<br>
+<label >  Tổng : <span id ="KQ"></span> </label>
+<br>
+<br>
+<label >  Điểm Trung Bình : <span id ="TB"></span> </label>
+</body>
+<script>
+    function TinhDiem () {
+        var diemLy   = +document.getElementById('ly').value;
+        var diemHoa  =+document.getElementById('hoa').value;
+        var diemSinh =+document.getElementById('sinh').value;
+        var tong = diemHoa + diemLy +diemSinh;
+        document.getElementById("KQ").textContent = tong;
+        var diemTB = (diemHoa + diemLy +diemSinh)/3;
+        document.getElementById("TB").textContent = diemTB;
+    }
+
+</script>
+
+</html>

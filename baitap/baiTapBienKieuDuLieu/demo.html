@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h2> Calculator</h2>
+    <input type="text" size="10" id="t1">
+    <input type="text" size="10" id="t2">
+    <input type="text" id="dau" size="3">
+    <br>
+    <br>
+    <button type="button" onclick="tamngu()">Tính</button>
+    <label> Result : <span id ="KQ"> </span> </label>
+
+
+</form>
+</body>
+<script>
+<!--  Gộp 4 hàm vào 1-->
+   function  tamngu() {
+        var a = +document.getElementById("t1").value;
+        var b = +document.getElementById("t2").value;
+        var c = document.getElementById("dau").value;
+        if(c=='+'){
+            var tong = a + b;
+            document.getElementById("KQ").textContent = tong;
+        }
+       if(c=='-'){
+           var hieu = a - b;
+           document.getElementById("KQ").textContent = hieu;
+       }
+       if(c=='*'){
+           var tich = a * b;
+           document.getElementById("KQ").textContent = tich;
+       }
+       if(c=='/'){
+           var thuong = a / b;
+           document.getElementById("KQ").textContent = thuong;
+       }
+   }
+
+</script>
+</html>

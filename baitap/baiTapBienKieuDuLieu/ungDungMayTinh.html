@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h2> Calculator</h2>
+    <input type="text" size="10" id="t1">
+    <input type="text" size="10" id="t2">
+
+    <br>
+    <br>
+    <button type="button"  onclick="tong()">Addition(+)</button>
+    <button type="button"  onclick="tru()">Subtraction(-)</button>
+    <button type="button"  onclick="nhan()">MultiPlication(*)</button>
+    <button type="button"  onclick="thuong()">Division(/)</button>
+    <br>
+    <br>
+    <label> Result : <span id ="KQ"> </span></label>
+</form>
+</body>
+</html>
+<script>
+    function tong() {
+        var a = +document.getElementById("t1").value;
+        var b = +document.getElementById("t2").value;
+        let tong = a+b;
+        document.getElementById("KQ").textContent = tong;
+    }
+    function tru() {
+        var a = +document.getElementById("t1").value;
+        var b = +document.getElementById("t2").value;
+        let tru = a-b;
+        document.getElementById("KQ").textContent = tru;
+    }
+    function nhan() {
+        var a = +document.getElementById("t1").value;
+        var b = +document.getElementById("t2").value;
+        let tich = a*b;
+        document.getElementById("KQ").textContent = tich;
+    }
+    function thuong() {
+        var a = +document.getElementById("t1").value;
+        var b = +document.getElementById("t2").value;
+        let thuong = a/b;
+        document.getElementById("KQ").textContent = thuong;
+    }
+
+</script>
+<!--  Gộp 4 hàm vào 1-->
+<!--
+function  tamngu() {
+var a = +document.getElementById("t1").value;
+var b = +document.getElementById("t2").value;
+var c = document.getElementById("dau").value;
+if(c=='+'){
+var tong = a + b;
+document.getElementById("KQ").textContent = tong;
+}
+if(c=='-'){
+var hieu = a - b;
+document.getElementById("KQ").textContent = hieu;
+}
+if(c=='*'){
+var tich = a * b;
+document.getElementById("KQ").textContent = tich;
+}
+if(c=='/'){
+var thuong = a / b;
+document.getElementById("KQ").textContent = thuong;
+}
+}-->
