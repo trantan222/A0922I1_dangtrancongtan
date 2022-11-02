@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>    let dktra = +prompt("Nhập điểm ktra");
+let dthigk = +prompt("Nhập điểm thi giữa kì");
+let dthick = +prompt("Nhập điểm thi cuối kì");
+let dtb = (dktra + (dthigk * 2) + (dthick * 3)) / 6;
+if (dtb < 5) {
+    document.write("học sinh yếu");
+}
+if (dtb >= 5 && dtb < 8) {
+    document.write("học sinh khá");
+}
+if (dtb >= 8) {
+    document.write("học sinh giỏi");
+}
+</script>
+</body>
+</html>

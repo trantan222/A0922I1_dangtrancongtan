@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>    let sum = +prompt("Nhập doanh thu quán:");
+let roseMoney = 0;
+if (sum <= 100000000) {
+    roseMoney = (sum * 5) / 100;
+}
+if (sum <= 300000000) {
+    roseMoney = (sum * 10) / 100;
+}
+if (sum === 0) {
+    document.write(roseMoney);
+}
+document.write("Tiền hoa hồng:" + roseMoney);</script>
+</body>
+</html>
