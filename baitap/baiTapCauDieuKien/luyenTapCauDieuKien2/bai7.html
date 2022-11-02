@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<script>
+let a = +prompt("Nhập số a ")
+let b = +prompt("Nhập số b ")
+let c = +prompt("Nhập số c ")
+let denta = (b*b) -(4*a*c)
+if(denta<0){
+    document.write("phuong trình vô nghiệm")
+}else if(denta>0){
+    let x1 = (-b + Math.sqrt(denta))/ (2*a)
+    let x2 = (-b - Math.sqrt(denta))/ (2*a)
+    document.write("x1 = "+x1);
+    document.write("x2 = "+x2);
+}else if(denta ===0){
+    let x1,x2;
+    x1=x2= -b/(a*2)
+    document.write("x1 = x2"+x1);
+}
+</script>
+</body>
+</html>

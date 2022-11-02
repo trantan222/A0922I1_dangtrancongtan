@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let giaTri;
+        giaTri= +prompt("Nhập Nhiệt độ")
+    while (giaTri <20 || giaTri >100) {
+        if (giaTri > 100) {
+            alert("Giảm Nhiệt độ")
+            giaTri = prompt("Nhập lại nhiệt độ")
+        } else if (giaTri < 20) {
+            alert("Tăng Nhiệt độ")
+            giaTri = prompt("Nhập lại nhiệt độ")
+        }
+    }
+    alert("Nhiệt độ bình thường"
+    )
+</script>
+</body>
+</html>

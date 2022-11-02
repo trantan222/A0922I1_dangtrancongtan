@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</title>
+</head>
+<body>
+<script>
+    let day =""; let tong =0;
+    let count =0;
+    for (let i = 1;  ; i++) {
+        if(i%7==0){
+            day += i +" "
+            tong +=i;
+            count++
+        }
+        if(count==30){
+            document.write("dãy số chia hết cho 7 : "+day)
+            document.write("tổng = "+tong)
+            break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button type="button" onclick="play()">Chơi</button>
+<script>
+    function play() {
+        do {
+            let begin= +prompt("Nhập vào khoảng đầu ");
+            let end  = +prompt("Nhập vào khoảng sau ");
+            if(!isNaN(begin) && !isNaN(end) && end >begin ) {
+                let numrandom = Math.floor(Math.random() * (end - begin + 1) + begin);
+                let somayman = prompt("Nhập 1 số may mắn bất kì ");
+                while (somayman > numrandom || somayman < numrandom) {
+                    if (numrandom === somayman) {
+                        alert("CONGRATULATION!!")
+                        document.write("số may mắn = "+numrandom);
+                        break;
+                    } else if (somayman > numrandom || somayman < numrandom) {
+                        alert("Rất Tiếc Không Trúng Rồi  ")
+                        somayman = prompt("Nhập lại may mắn ");
+                    }
+
+                }
+
+            }else
+            {
+                alert("Nhập dữ liệu sai!!")
+                begin = +prompt("Nhập vào khoảng đầu ");
+                end = +prompt("Nhập vào khoảng sau ");
+            }
+
+        }while (isNaN(begin) || isNaN(end)|| begin> end);
+    }
+
+
+</script>
+</body>
+</html>

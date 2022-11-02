@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<script>
+    let thunhap = +prompt("Nhập mức thu nhập");
+    let thue;
+    if(thunhap>=400 && thunhap<=600){
+        thue = (thunhap*5)/100;
+        let soDu = thunhap-thue;
+        document.write("số dư "+soDu)
+    }else if(thunhap>600 && thunhap<=900){
+        thue = (thunhap*10)/100;
+        let soDu = thunhap-thue;
+        document.write("số dư "+soDu)
+    }else if(thunhap>900 && thunhap<=1200){
+        thue = (thunhap*15)/100;
+        let soDu = thunhap-thue;
+        document.write("số dư "+soDu)
+    }else if(thunhap>1200 && thunhap<=1600){
+        thue = (thunhap*20)/100;
+        let soDu = thunhap-thue;
+        document.write("số dư "+soDu)
+    }
+
+</script>
+</body>
+</html>
